@@ -12,9 +12,9 @@ using ld = long double;
 int isPalindrom(string s) {
     int left = 0;
     int right = s.size() - 1;
-
+    
     while(left < right) {
-        if(s[left] != s[right]) return 0; // mismatch
+        if(s[left] != s[right]) return 0; // 
         left++;
         right--;
     }
@@ -30,6 +30,6 @@ string solver(string s){
     return left.size() > right.size() ? left : right;
 }
 int main(){
-   string s="babaddtattarrattatddetartrateedredividerb";
+   string s="babad";
    cout<<solver(s);
 }
