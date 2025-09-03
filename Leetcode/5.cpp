@@ -37,21 +37,18 @@ int solver(string s){
       //   cout<<i<<endl;
     }
     //for even size
-    i=1,j=2;
-    int k=1; 
-    len=0;
-    int maxlen2=2;
-    while(i<s.size()-2){ //abba
-
-       while(s[i-k]==s[j+k] && i>=0 && j< s.size()-1 &&s[i]==s[j]){
-        cout<<s[i-k]<<" "<<s[j+k]<<endl;
-             len=len+2;
-             k++;
-       }
-       k=1;
-       maxlen2=max(maxlen2,len);
-       i++;
-       j++;
+    int l=1,r=l+1;
+    i=0;
+    int maxlen2=1,time=0;
+    while(i<s.size()-1){ //abba
+      l=i,r=i+1;
+        while(s[l]==s[r] && l>=0 && r<s.size()){
+          maxlen2=max(maxlen2,r-l+1);
+          l--;
+          r++;
+          //cout<<time++<<endl;
+        }
+        i++;
     }
     cout<<"maxlen-1 "<<maxlen<<endl;
     cout<<"maxlen-2 "<<maxlen2<<endl;
