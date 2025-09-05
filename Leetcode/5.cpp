@@ -21,40 +21,51 @@ int isPalindrom(string s) {
     return 1; // palindrome
 }
 int solver(string s){
-    int i=1,j; int maxlen=1;
+    int i=1; int maxlen=1;
     int len=1;
-    
-    while(i<s.size()-1){
-         j=1;
-      while(s[i-j]==s[i+j]){
-        len=len+2;
-        j++;
-        //cout<<"palin checking"<<endl;
-      }
-      maxlen=max(maxlen,len);
-      len=1;
-      i++;
-      //   cout<<i<<endl;
+    int left,right; string s1="";
+    while(i<s.size()-1){ //bacabd
+      left=i-1,right=i+1;
+       while( left>=0  && right<s.size() &&s[left]==s[right]){
+          if(maxlen < right-left+1){
+            maxlen=right-left+1;
+            s1=s.substr(left,right+1);
+          }
+        left--;
+        right++;
+       }
+       i++;
     }
+   // cout<<s1<<endl;
     //for even size
     int l=1,r=l+1;
     i=0;
     int maxlen2=1,time=0;
+    string s2="";
     while(i<s.size()-1){ //abba
-      l=i,r=i+1;
+      l=i,r=i+1; 
         while(s[l]==s[r] && l>=0 && r<s.size()){
-          maxlen2=max(maxlen2,r-l+1);
+          if(maxlen2 < r-l+1){
+            maxlen2=r-l+1;
+            s2=s.substr(l,r+1);
+          }
           l--;
           r++;
           //cout<<time++<<endl;
         }
         i++;
     }
-    cout<<"maxlen-1 "<<maxlen<<endl;
-    cout<<"maxlen-2 "<<maxlen2<<endl;
+    //cout<<s2<<endl;
+    if(maxlen > maxlen2){
+      cout<<s1<<endl;
+    }
+    else {
+      cout<<s2<<endl;
+    }
+    cout<<"maxlen 1-"<<maxlen<<"\n"<<"maxlen 2 -"<<maxlen2<<endl;
     return 0;
 }
 int main(){
-   string s="asdbbdsasdsac";
+   string s="acacas";
    cout<<solver(s);
 }
