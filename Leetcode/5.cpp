@@ -20,7 +20,7 @@ int isPalindrom(string s) {
     }
     return 1; // palindrome
 }
-int solver(string s){
+string solver(string s){
     int i=1; int maxlen=1;
     int len=1;
     int left,right; string s1="";
@@ -57,15 +57,15 @@ int solver(string s){
     }
     //cout<<s2<<endl;
     if(maxlen > maxlen2){
-      cout<<s1<<endl;
+     return s1;
     }
     else {
-      cout<<s2<<endl;
+      return s2;
     }
-    cout<<"maxlen 1-"<<maxlen<<"\n"<<"maxlen 2 -"<<maxlen2<<endl;
-    return 0;
+   // cout<<"maxlen 1-"<<maxlen<<"\n"<<"maxlen 2 -"<<maxlen2<<endl;
+  
 }
 int main(){
-   string s="acacas";
+   string s="acaacas";
    cout<<solver(s);
 }
