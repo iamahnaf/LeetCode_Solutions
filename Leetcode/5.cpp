@@ -66,6 +66,6 @@ string solver(string s){
   
 }
 int main(){
-   string s="acaacas";
+   string s="aabbas";
    cout<<solver(s);
 }
