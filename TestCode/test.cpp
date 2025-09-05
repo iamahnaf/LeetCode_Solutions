@@ -4,8 +4,8 @@ string solver(string s){
    
 }
 int main(){
-   string s="babad";
-   //reverse(s.begin(),s.end());
+   string s="ac";
+   cout<<s.substr(0,1);
    
    cout<<s.substr(2);
 }

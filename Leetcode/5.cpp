@@ -9,19 +9,14 @@ using namespace std;
 using ll = long long;
 using ull = unsigned long long;
 using ld = long double;
-int isPalindrom(string s) {
-    int left = 0;
-    int right = s.size() - 1;
-    
-    while(left < right) {
-        if(s[left] != s[right]) return 0; // 
-        left++;
-        right--;
-    }
-    return 1; // palindrome
-}
+
 string solver(string s){
-    int i=1; int maxlen=1;
+  if(s.size()==1){
+    return s.substr(0,1);
+  }else if(s.size()==2 && s[0]!=s[1]){
+    return s.substr(0,1);
+  }
+    int i=0; int maxlen=1;
     int len=1;
     int left,right; string s1="";
     while(i<s.size()-1){ //bacabd
@@ -29,7 +24,7 @@ string solver(string s){
        while( left>=0  && right<s.size() &&s[left]==s[right]){
           if(maxlen < right-left+1){
             maxlen=right-left+1;
-            s1=s.substr(left,right+1);
+            s1 = s.substr(left, right - left + 1);
           }
         left--;
         right++;
@@ -44,10 +39,10 @@ string solver(string s){
     string s2="";
     while(i<s.size()-1){ //abba
       l=i,r=i+1; 
-        while(s[l]==s[r] && l>=0 && r<s.size()){
+        while(l>=0 && r<s.size() && s[l]==s[r]){
           if(maxlen2 < r-l+1){
             maxlen2=r-l+1;
-            s2=s.substr(l,r+1);
+            s2 = s.substr(l, r - l + 1);
           }
           l--;
           r++;
@@ -56,16 +51,19 @@ string solver(string s){
         i++;
     }
     //cout<<s2<<endl;
+    //cout<<"maxlen 1 "<<maxlen<<"\n"<<"maxlen 2 "<<maxlen2<<endl;
+    if(maxlen==1 & maxlen2==1){
+      return s.substr(0,1);
+    }
     if(maxlen > maxlen2){
      return s1;
     }
     else {
       return s2;
     }
-   // cout<<"maxlen 1-"<<maxlen<<"\n"<<"maxlen 2 -"<<maxlen2<<endl;
-  
+    
 }
 int main(){
-   string s="aabbas";
+   string s="aassssdbawbdwbdasjdsdsdsdsdsdsdsbaasdaw";
    cout<<solver(s);
 }
