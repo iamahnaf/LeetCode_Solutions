@@ -10,5 +10,5 @@ uint32_t reverseBits(int n){
      return res;
 }
 int main(){
-   cout<<reverseBits(13);
+   cout<<reverseBits(15);
 }
