@@ -33,7 +33,7 @@ string solver(string s){
        i++;
     }
    // cout<<s1<<endl;
-    //for even size
+    //for even palindrom checking
     int l=1,r=l+1;
     i=0;
     int maxlen2=1,time=0;
