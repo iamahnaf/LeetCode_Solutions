@@ -19,6 +19,7 @@ string solver(string s){
     int i=0; int maxlen=1;
     int len=1;
     int left,right; string s1="";
+    //for odd number palindrom checking
     while(i<s.size()-1){ //bacabd
       left=i-1,right=i+1;
        while( left>=0  && right<s.size() &&s[left]==s[right]){
