@@ -64,6 +64,7 @@ string solver(string s){
     
 }
 int main(){
-   string s="aassssdbawbdwbdasjdsdsdsdsdsdsdsbaasdaw";
-   cout<<solver(s);
+   string s;
+   cin>>s;
+   cout<<solver(S);
 }
