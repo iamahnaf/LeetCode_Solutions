@@ -64,7 +64,8 @@ string solver(string s){
     
 }
 int main(){
+  fast_io
    string s;
    cin>>s;
-   cout<<solver(S);
+   cout<<solver(s);
 }
