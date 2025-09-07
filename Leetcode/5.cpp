@@ -32,7 +32,7 @@ string solver(string s){
        }
        i++;
     }
-   // cout<<s1<<endl;
+
     //for even palindrom checking
     int l=1,r=l+1;
     i=0;
@@ -47,11 +47,11 @@ string solver(string s){
           }
           l--;
           r++;
-          //cout<<time++<<endl;
+      
         }
         i++;
     }
-    //cout<<s2<<endl;
+    
     //cout<<"maxlen 1 "<<maxlen<<"\n"<<"maxlen 2 "<<maxlen2<<endl;
     if(maxlen==1 & maxlen2==1){
       return s.substr(0,1);
