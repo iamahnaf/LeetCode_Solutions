@@ -3,9 +3,20 @@ using namespace std;
 vector<vector<string>> groupAnagrams(vector<string>& strs) {
                                                                   //Input: strs = ["eat","tea","tan","ate","nat","bat"]
                                                                  //Output: [["bat"],["nat","tan"],["ate","eat","tea"]]    
-
-                                                                 
+  
+    for(string &s: strs){
+         sort(s.begin(),s.end());
+    } 
+     for(string s: strs){
+        cout<<s<<endl;
+    }
+    unordered_map<string,vector<int>> umap;
+   for(int i=0;i<strs.size();i++){
+    umap.emplace(strs[i],i);
+   }
+                                                                   
 }
 int main(){
-
+   vector<string> str={"eat","tea","tan","ate","nat","bat"};
+   groupAnagrams(str);
 }
