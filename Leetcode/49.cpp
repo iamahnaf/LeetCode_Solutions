@@ -10,10 +10,20 @@ vector<vector<string>> groupAnagrams(vector<string>& strs) {
      for(string s: strs){
         cout<<s<<endl;
     }
-    unordered_map<string,vector<int>> umap;
+    cout<<"done"<<endl;
+    unordered_map<string, vector<int> > umap;
    for(int i=0;i<strs.size();i++){
-    umap.emplace(strs[i],i);
+    umap[strs[i]].push_back(i);
    }
+   for(auto it: umap){
+    cout<<it.first;
+    for(int idx: it.second){
+        cout<<idx<<" ";
+    }
+    cout<<endl;
+   }
+   vector<vector<string>> ans;
+   
                                                                    
 }
 int main(){
