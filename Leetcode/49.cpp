@@ -1,15 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
-vector<vector<string>> groupAnagrams(vector<string>& strs) {
+vector<vector<string>> groupAnagrams(vector<string>& s) {
                                                                   //Input: strs = ["eat","tea","tan","ate","nat","bat"]
                                                                  //Output: [["bat"],["nat","tan"],["ate","eat","tea"]]    
-  
+     vector<string> strs(s.begin(),s.end());
     for(string &s: strs){
          sort(s.begin(),s.end());
     } 
-     for(string s: strs){
-        cout<<s<<endl;
-    }
     cout<<"done"<<endl;
     unordered_map<string, vector<int> > umap;
    for(int i=0;i<strs.size();i++){
@@ -23,9 +20,22 @@ vector<vector<string>> groupAnagrams(vector<string>& strs) {
     cout<<endl;
    }
    vector<vector<string>> ans;
-   
+    for(auto it: umap){
+        vector<string> temp;
+       for(int i: it.second){
+        temp.push_back(s[i]);
+       }
+       ans.push_back(temp);
+   }
+   cout<<"done"<<endl;
+   for(auto it: ans){
+    for(string s: it){
+        cout<<s<<" ";
+    }
+    cout<<endl;
+   }
 
-                                                                   
+    return ans;                                                               
 }
 int main(){
    vector<string> str={"eat","tea","tan","ate","nat","bat"};
