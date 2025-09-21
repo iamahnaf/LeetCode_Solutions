@@ -10,7 +10,7 @@ long long onlynum(string s){
             continue;
         } 
     }
-    for(char it:s){   //  -32abds233 1234-cdf12
+    for(char it:s){  
         if(!isdigit(it) && !isspace(it)){
             if(isalpha(it)){
                 cout<<"it is a letter: "<<it<<endl;
