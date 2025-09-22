@@ -7,7 +7,6 @@ vector<vector<string>> groupAnagrams(vector<string>& s) {
     for(string &s: strs){
          sort(s.begin(),s.end());
     } 
-    cout<<"done"<<endl;
     unordered_map<string, vector<int> > umap;
    for(int i=0;i<strs.size();i++){
     umap[strs[i]].push_back(i);
