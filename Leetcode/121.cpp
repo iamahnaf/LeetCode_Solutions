@@ -10,6 +10,6 @@ int maxprofit(vector<int> v){
     }
 }
 int main(){
-   vector<int> v={7,1,5,3,6,4};
+   vector<int> v={5,1,4,6,4,6};
    cout<<maxprofit(v);
 }
