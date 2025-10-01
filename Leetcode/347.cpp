@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void solver(){
+void solver(vector<int> v){
    
 }
 int main(){
