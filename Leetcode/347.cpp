@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 bool comp(pair<int,int> a,pair<int,int> b){
-  return a.second<b.second;
+  return a.second>b.second;
 }
 void solver(vector<int> v,int k){
      unordered_map<int,int> maps;
