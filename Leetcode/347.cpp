@@ -6,8 +6,12 @@ void solver(vector<int> v,int k){
       maps[it]++;
      }
      vector<pair<int,int>> vec;
-     
-
+     for(auto it:maps){
+      vec.push_back(it);
+     }
+     for(auto it: vec){
+      cout<<it.first<<" "<<it.second<<endl;
+     }
 }
 int main(){
    vector<int> v={4,1,1,1,2,2,3};
