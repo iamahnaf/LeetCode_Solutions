@@ -1,10 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 void solver(vector<int> v,int k){
-     set<pair<int,int>> maps;
-     for(int it:v){
-        maps.
-     }
       for(auto it: maps){
         cout<<it.first<<" "<<it.second<<endl;
       }
