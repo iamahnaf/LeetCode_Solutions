@@ -13,9 +13,7 @@ void solver(vector<int> v,int k){
       vec.push_back(it);
      }
      sort(vec.begin(),vec.end(),comp);
-     for(auto it: vec){
-      cout<<it.first<<" "<<it.second<<endl;
-     }
+    
 }
 int main(){
    vector<int> v={4,1,1,1,2,2,3};
