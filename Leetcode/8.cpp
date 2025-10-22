@@ -43,7 +43,6 @@ long long onlynum(string s){
    }
    if (!negFlag && newnum >= INT_MAX) return INT_MAX;
    if ( negFlag && -newnum <= INT_MIN) return INT_MIN;
-   //cout<<"FInal num: "<<num<<endl;
    if(negFlag==true){
         newnum=stoi(num);
        newnum= 0-newnum;
