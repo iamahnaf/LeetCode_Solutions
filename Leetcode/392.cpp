@@ -5,7 +5,6 @@ class Solution {
 public:
     bool isSubsequence(string s, string t) {  // e.g., "abc", "ahbgdc"
         int idx = 0; 
-
         for (int i = 0; i < s.size(); i++) {
             bool found = false;
             for (int j = idx; j < t.size(); j++) {
