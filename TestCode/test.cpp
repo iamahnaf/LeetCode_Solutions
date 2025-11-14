@@ -4,6 +4,10 @@ void solver(vector<int> v){
 
 }
 int main(){
-   vector<int> v={5,3,1,4,6,7,8};
-    solver(v);
+   int i=1; int sum=0;
+   while(i <= 100000){
+    sum=sum+i;
+     i=i+1;
+   }
+   cout<<sum;
 }
