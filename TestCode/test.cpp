@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 void solver(vector<int> v){
-
 }
 int main(){
    int i=1; int sum=0;
