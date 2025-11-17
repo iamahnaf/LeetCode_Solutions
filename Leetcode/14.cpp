@@ -2,22 +2,16 @@
 using namespace std; //prefix are start from zero index
 void solver(vector<string> arr){
     string check= arr[0];
-    int final_len=0;
+    
     for(int i=1;i<arr.size();i++){
       string temp=arr[i]; 
-      int len=0;
-      int j=0,k=0;
-      while( j < temp.size() && k < check.size()){
-        if(check[k]==temp[j]){
-         len++;
-         j++;
-         k++;
-        }else {
-          final_len=min(final_len,len);
-        }
+      int j=0;
+      while( j < temp.size() && j < check.size() && check[j]==temp[j]){
+        j++;
       }
+     check=check.substr(0,j);
     }
-    cout<<final_len;
+    cout<<check;
 }
 int main(){
    vector<string> arr={"flower","flow","flight"};
