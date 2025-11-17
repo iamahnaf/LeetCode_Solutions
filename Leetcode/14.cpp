@@ -17,7 +17,9 @@ void solver(vector<string> arr){
         }
       }
     }
+    cout<<final_len;
 }
 int main(){
-   
+   vector<string> arr={"flower","flow","flight"};
+   solver(arr);
 }
