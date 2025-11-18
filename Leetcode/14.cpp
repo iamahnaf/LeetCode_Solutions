@@ -2,7 +2,6 @@
 using namespace std; //prefix are start from zero index
 void solver(vector<string> arr){
     string check= arr[0];
-    
     for(int i=1;i<arr.size();i++){
       string temp=arr[i]; 
       int j=0;
