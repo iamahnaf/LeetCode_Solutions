@@ -12,6 +12,7 @@ void solver(vector<string> arr){
     }
     cout<<check;
 }
+
 int main(){
    vector<string> arr={"flower","flow","flight"};
    solver(arr);
