@@ -8,7 +8,7 @@ long long onlynum(string s){
         if(isspace(c)) i++;
         if(!isspace(c)) break;
     }
-    // neg checking
+
     if (i < s.length() && (s[i] == '-' || s[i] == '+')) {
         negflag = (s[i] == '-');
         i++;
