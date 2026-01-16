@@ -12,7 +12,7 @@ long long onlynum(string s){
         negflag = (s[i] == '-');
         i++;
     }
-    //
+
     while(i<s.length()){
         char it=s[i];
         if(!isdigit(it)){
