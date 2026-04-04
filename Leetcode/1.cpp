@@ -20,5 +20,5 @@ int main(){
    for(auto i: it){
     cout<<i;
    }
-   cout<<"done coding";
+  
 }
