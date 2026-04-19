@@ -2,7 +2,7 @@
 using namespace std;
 int lenSubstring(string s){
   int l=0,r=0,maxlen=0;
-  //vector<int> hash(256,
+  //vector<int> hash(256
   unordered_map<char,int> hash;
   while(r<s.size()){
     if(hash.find(s[r])==hash.end()){
