@@ -15,7 +15,6 @@ int lenSubstring(string s){
     r++;
   }
   return maxlen;
-  
 }
 int main(){
   string s="abcabcbb";
