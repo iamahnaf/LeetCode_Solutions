@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-void solver(string s){
+string solver(string s){
    vector<string> str;
    string temp;
    for (char it: s){
@@ -32,10 +32,13 @@ void solver(string s){
       ans+=it;
       ans+="/";
    }
-   ans.pop_back();
-   cout<<ans;
+   if(ans.size()>1){
+    ans.pop_back();
+   }
+   //cout<<ans;
+   return ans;
 }
 int main(){
-   string s="/.../a/../b/c/../d/./";
-   solver(s);
+   string s="/../";
+   cout<<solver(s);
 }
